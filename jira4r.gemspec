@@ -23,9 +23,15 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "jira4r.gemspec",
      "lib/jira4r.rb",
+     "lib/jira4r/jira_tool.rb",
+     "lib/jira4r/v2/jira_service.rb",
+     "lib/jira4r/v2/jira_service_mapping_registry.rb",
+     "lib/jira4r/v2/jira_soap_service_driver.rb",
      "test/helper.rb",
-     "test/test_jira4r.rb"
+     "test/test_jira4r.rb",
+     "wsdl/jirasoapservice-v2.wsdl"
   ]
   s.homepage = %q{http://github.com/tastyhat/jira4r}
   s.rdoc_options = ["--charset=UTF-8"]
