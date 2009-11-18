@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "jira4r"
     gem.summary = %Q{JIRA Soap Interface Gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{JIRA Soap Interface Gem}
     gem.email = "tastyhat@jamesstuart.org"
     gem.homepage = "http://github.com/tastyhat/jira4r"
     gem.authors = ["James Stuart"]
