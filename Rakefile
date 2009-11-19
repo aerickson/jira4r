@@ -10,6 +10,7 @@ begin
     gem.email = "tastyhat@jamesstuart.org"
     gem.homepage = "http://github.com/tastyhat/jira4r"
     gem.authors = ["James Stuart"]
+    gem.add_dependency "soap4r"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
