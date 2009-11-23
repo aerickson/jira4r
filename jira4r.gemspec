@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jira4r}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Stuart"]
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "jira4r.gemspec",
      "lib/jira4r.rb",
      "lib/jira4r/jira_tool.rb",
+     "lib/jira4r/server.rb",
      "lib/jira4r/v2/jira_service.rb",
      "lib/jira4r/v2/jira_service_mapping_registry.rb",
      "lib/jira4r/v2/jira_soap_service_driver.rb",
