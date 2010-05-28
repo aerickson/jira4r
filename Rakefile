@@ -7,7 +7,7 @@ begin
     gem.name = "jira4r"
     gem.summary = %Q{JIRA Soap Interface Gem}
     gem.description = %Q{JIRA Soap Interface Gem}
-    gem.email = "tastyhat@jamesstuart.org"
+    gem.email = "andrew@twitter.com"
     gem.homepage = "http://github.com/aerickson/jira4r"
     gem.authors = ["James Stuart", "Andrew Erickson", "Andrew Cantino"]
     gem.add_dependency "soap4r"

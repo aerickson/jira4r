@@ -1,7 +1,7 @@
 require 'xsd/qname'
 
-module Jira4R
-  module V2
+module Jira4R; module V2
+
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteComment
 #   author - SOAP::SOAPString
@@ -52,7 +52,7 @@ end
 #   buildDate - SOAP::SOAPDateTime
 #   buildNumber - SOAP::SOAPString
 #   edition - SOAP::SOAPString
-#   serverTime - RemoteTimeInfo
+#   serverTime - Jira4R::V2::RemoteTimeInfo
 #   version - SOAP::SOAPString
 class RemoteServerInfo
   attr_accessor :baseUrl
@@ -96,7 +96,7 @@ end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteGroup
 #   name - SOAP::SOAPString
-#   users - ArrayOf_tns1_RemoteUser
+#   users - Jira4R::V2::ArrayOf_tns1_RemoteUser
 class RemoteGroup < RemoteEntity
   attr_accessor :name
   attr_accessor :users
@@ -289,11 +289,11 @@ end
 #   id - SOAP::SOAPString
 #   name - SOAP::SOAPString
 #   description - SOAP::SOAPString
-#   issueSecurityScheme - RemoteScheme
+#   issueSecurityScheme - Jira4R::V2::RemoteScheme
 #   key - SOAP::SOAPString
 #   lead - SOAP::SOAPString
-#   notificationScheme - RemoteScheme
-#   permissionScheme - RemotePermissionScheme
+#   notificationScheme - Jira4R::V2::RemoteScheme
+#   permissionScheme - Jira4R::V2::RemotePermissionScheme
 #   projectUrl - SOAP::SOAPString
 #   url - SOAP::SOAPString
 class RemoteProject < AbstractNamedRemoteEntity
@@ -378,16 +378,16 @@ end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteIssue
 #   id - SOAP::SOAPString
-#   affectsVersions - ArrayOf_tns1_RemoteVersion
+#   affectsVersions - Jira4R::V2::ArrayOf_tns1_RemoteVersion
 #   assignee - SOAP::SOAPString
-#   attachmentNames - ArrayOf_xsd_string
-#   components - ArrayOf_tns1_RemoteComponent
+#   attachmentNames - Jira4R::V2::ArrayOf_xsd_string
+#   components - Jira4R::V2::ArrayOf_tns1_RemoteComponent
 #   created - SOAP::SOAPDateTime
-#   customFieldValues - ArrayOf_tns1_RemoteCustomFieldValue
+#   customFieldValues - Jira4R::V2::ArrayOf_tns1_RemoteCustomFieldValue
 #   description - SOAP::SOAPString
 #   duedate - SOAP::SOAPDateTime
 #   environment - SOAP::SOAPString
-#   fixVersions - ArrayOf_tns1_RemoteVersion
+#   fixVersions - Jira4R::V2::ArrayOf_tns1_RemoteVersion
 #   key - SOAP::SOAPString
 #   priority - SOAP::SOAPString
 #   project - SOAP::SOAPString
@@ -474,7 +474,7 @@ end
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteCustomFieldValue
 #   customfieldId - SOAP::SOAPString
 #   key - SOAP::SOAPString
-#   values - ArrayOf_xsd_string
+#   values - Jira4R::V2::ArrayOf_xsd_string
 class RemoteCustomFieldValue
   attr_accessor :customfieldId
   attr_accessor :key
@@ -489,7 +489,7 @@ end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteFieldValue
 #   id - SOAP::SOAPString
-#   values - ArrayOf_xsd_string
+#   values - Jira4R::V2::ArrayOf_xsd_string
 class RemoteFieldValue
   attr_accessor :id
   attr_accessor :values
@@ -561,7 +561,7 @@ end
 #   id - SOAP::SOAPLong
 #   name - SOAP::SOAPString
 #   type - SOAP::SOAPString
-#   permissionMappings - ArrayOf_tns1_RemotePermissionMapping
+#   permissionMappings - Jira4R::V2::ArrayOf_tns1_RemotePermissionMapping
 class RemotePermissionScheme < RemoteScheme
   attr_accessor :description
   attr_accessor :id
@@ -592,8 +592,8 @@ class RemotePermission
 end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemotePermissionMapping
-#   permission - RemotePermission
-#   remoteEntities - ArrayOf_tns1_RemoteEntity
+#   permission - Jira4R::V2::RemotePermission
+#   remoteEntities - Jira4R::V2::ArrayOf_tns1_RemoteEntity
 class RemotePermissionMapping
   attr_accessor :permission
   attr_accessor :remoteEntities
@@ -623,9 +623,9 @@ end
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteRoleActor
 #   descriptor - SOAP::SOAPString
 #   parameter - SOAP::SOAPString
-#   projectRole - RemoteProjectRole
+#   projectRole - Jira4R::V2::RemoteProjectRole
 #   type - SOAP::SOAPString
-#   users - ArrayOf_tns1_RemoteUser
+#   users - Jira4R::V2::ArrayOf_tns1_RemoteUser
 class RemoteRoleActor
   attr_accessor :descriptor
   attr_accessor :parameter
@@ -643,9 +643,9 @@ class RemoteRoleActor
 end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteRoleActors
-#   projectRole - RemoteProjectRole
-#   roleActors - ArrayOf_tns1_RemoteRoleActor
-#   users - ArrayOf_tns1_RemoteUser
+#   projectRole - Jira4R::V2::RemoteProjectRole
+#   roleActors - Jira4R::V2::ArrayOf_tns1_RemoteRoleActor
+#   users - Jira4R::V2::ArrayOf_tns1_RemoteUser
 class RemoteRoleActors
   attr_accessor :projectRole
   attr_accessor :roleActors
@@ -659,10 +659,10 @@ class RemoteRoleActors
 end
 
 # {http://beans.soap.rpc.jira.atlassian.com}RemoteProjectRoleActors
-#   projectRole - RemoteProjectRole
-#   roleActors - ArrayOf_tns1_RemoteRoleActor
-#   users - ArrayOf_tns1_RemoteUser
-#   project - RemoteProject
+#   projectRole - Jira4R::V2::RemoteProjectRole
+#   roleActors - Jira4R::V2::ArrayOf_tns1_RemoteRoleActor
+#   users - Jira4R::V2::ArrayOf_tns1_RemoteUser
+#   project - Jira4R::V2::RemoteProject
 class RemoteProjectRoleActors < RemoteRoleActors
   attr_accessor :projectRole
   attr_accessor :roleActors
@@ -766,117 +766,117 @@ class RemoteAuthenticationException < ::StandardError
   end
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteUser
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteUser
 class ArrayOf_tns1_RemoteUser < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteVersion
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteVersion
 class ArrayOf_tns1_RemoteVersion < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_xsd_string
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_xsd_string
 class ArrayOf_xsd_string < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteComponent
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteComponent
 class ArrayOf_tns1_RemoteComponent < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteCustomFieldValue
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteCustomFieldValue
 class ArrayOf_tns1_RemoteCustomFieldValue < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteFieldValue
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteFieldValue
 class ArrayOf_tns1_RemoteFieldValue < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteNamedObject
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteNamedObject
 class ArrayOf_tns1_RemoteNamedObject < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteIssueType
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteIssueType
 class ArrayOf_tns1_RemoteIssueType < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteEntity
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteEntity
 class ArrayOf_tns1_RemoteEntity < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermissionMapping
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermissionMapping
 class ArrayOf_tns1_RemotePermissionMapping < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePriority
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePriority
 class ArrayOf_tns1_RemotePriority < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteResolution
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteResolution
 class ArrayOf_tns1_RemoteResolution < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteStatus
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteStatus
 class ArrayOf_tns1_RemoteStatus < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteProjectRole
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteProjectRole
 class ArrayOf_tns1_RemoteProjectRole < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteRoleActor
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteRoleActor
 class ArrayOf_tns1_RemoteRoleActor < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteScheme
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteScheme
 class ArrayOf_tns1_RemoteScheme < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteField
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteField
 class ArrayOf_tns1_RemoteField < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteComment
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteComment
 class ArrayOf_tns1_RemoteComment < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteFilter
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteFilter
 class ArrayOf_tns1_RemoteFilter < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteSecurityLevel
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteSecurityLevel
 class ArrayOf_tns1_RemoteSecurityLevel < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteAvatar
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteAvatar
 class ArrayOf_tns1_RemoteAvatar < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermissionScheme
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermissionScheme
 class ArrayOf_tns1_RemotePermissionScheme < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermission
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemotePermission
 class ArrayOf_tns1_RemotePermission < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_xsd_base64Binary
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_xsd_base64Binary
 class ArrayOf_xsd_base64Binary < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteAttachment
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteAttachment
 class ArrayOf_tns1_RemoteAttachment < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteWorklog
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteWorklog
 class ArrayOf_tns1_RemoteWorklog < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteIssue
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteIssue
 class ArrayOf_tns1_RemoteIssue < ::Array
 end
 
-# {http://jira.local.twitter.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteProject
+# {http://jira.atlassian.com/rpc/soap/jirasoapservice-v2}ArrayOf_tns1_RemoteProject
 class ArrayOf_tns1_RemoteProject < ::Array
 end
 
-end
-end
+
+end; end
